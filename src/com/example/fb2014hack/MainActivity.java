@@ -3,6 +3,7 @@ package com.example.fb2014hack;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.os.Build;
 
@@ -17,7 +19,9 @@ public class MainActivity extends ActionBarActivity {
 
 	Button About;
 	TextView display;
-	
+	ImageView Sydney;
+	Button Picture;
+	ImageView Speech;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,12 +29,28 @@ public class MainActivity extends ActionBarActivity {
 		
 		About = (Button) findViewById(R.id.button1);
 		display = (TextView) findViewById(R.id.textView1);
+		Sydney = (ImageView) findViewById(R.id.imageView1);
+		Picture = (Button) findViewById(R.id.button2);
+		Speech = (ImageView) findViewById(R.id.imageView2);
 		About.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				
+				display.setText("Sydney is a USC student studying Computer Science and Business. He is building a business called TalentTrail. This was made for fun as a quick hour project at his Facebook Hackathon.");
+				display.setTextSize(20);
+				Sydney.setVisibility(8);
+				Picture.setVisibility(1);
+			}
+		});
+		Picture.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				display.setVisibility(8);
+				Sydney.setVisibility(8);
+				Speech.setVisibility(1);
 			}
 		});
 		if (savedInstanceState == null) {
