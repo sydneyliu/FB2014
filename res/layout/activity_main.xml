@@ -21,6 +21,14 @@
         android:layout_marginBottom="80dp"
         android:visibility="gone"
         android:text="Picture" />
+      <Button
+        android:id="@+id/button3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone"
+        android:text="Home" />
 
     <TextView
         android:id="@+id/textView1"
@@ -45,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
+        android:layout_marginBottom="100dp"
         android:src="@drawable/suitpic" />
 
 </FrameLayout>

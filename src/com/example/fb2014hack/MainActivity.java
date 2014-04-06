@@ -22,6 +22,7 @@ public class MainActivity extends ActionBarActivity {
 	ImageView Sydney;
 	Button Picture;
 	ImageView Speech;
+	Button Home;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,6 +33,7 @@ public class MainActivity extends ActionBarActivity {
 		Sydney = (ImageView) findViewById(R.id.imageView1);
 		Picture = (Button) findViewById(R.id.button2);
 		Speech = (ImageView) findViewById(R.id.imageView2);
+		Home = (Button) findViewById(R.id.button3);
 		About.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -48,9 +50,26 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Picture.setVisibility(8);
 				display.setVisibility(8);
 				Sydney.setVisibility(8);
 				Speech.setVisibility(1);
+				About.setVisibility(8);
+				Home.setVisibility(1);
+			}
+		});
+		Home.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				display.setVisibility(1);
+				display.setText("Sydney Liu");
+				Sydney.setVisibility(1);
+				Speech.setVisibility(8);
+				Picture.setVisibility(8);
+				About.setVisibility(1);
+				Home.setVisibility(8);
 			}
 		});
 		if (savedInstanceState == null) {
